@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400" prefWidth="600" spacing="10" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListaController">
+
+    <!-- Título -->
+    <children>
+        <Label
+                alignment="CENTER"
+                maxWidth="1.7976931348623157E308"
+                text="Lista de la Compra"
+                styleClass="titulo-lista"
+        />
+
+        <Separator />
+
+        <!-- Encabezado de columnas -->
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 0 0 0 8;">
+            <children>
+                <Label text="Nombre" prefWidth="150" translateX="35" />
+                <Label text="Cantidad" prefWidth="60" translateX="30" />
+                <Label text="Notas" prefWidth="230" translateX="40" />
+            </children>
+        </HBox>
+
+        <!-- ScrollPane -->
+        <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+            <content>
+                <VBox fx:id="contenedorProductos" maxWidth="1.7976931348623157E308" spacing="8" />
+            </content>
+        </ScrollPane>
+
+        <!-- Barra inferior -->
+        <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" spacing="20">
+            <children>
+            <Label fx:id="lblTotal" text="Productos: " />
+                <Button fx:id="btnAgregar" onAction="#onAgregarProducto" text="Añadir producto" />
+                <Button fx:id="btnVaciar" onAction="#onVaciarLista" text="Vaciar lista" />
+                <Button fx:id="btnSalir" onAction="#onSalir" text="Salir" />
+            </children>
+        </HBox>
+    </children>
+</VBox>
