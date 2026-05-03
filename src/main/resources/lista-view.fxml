@@ -21,7 +21,7 @@
 
         <Separator />
 
-        <!-- Encabezado de columnas -->
+        <!-- HBox Productos -->
         <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 0 0 0 8;">
             <children>
                 <Label text="Nombre" prefWidth="150" translateX="35" />
