@@ -22,7 +22,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        //El metodo launch lanza la aplicación.
+        //El metodo lanza el metodo start() de arriba iniciando la aplicación.
         launch();
     }
 }
